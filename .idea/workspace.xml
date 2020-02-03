@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/Lagrange Flows.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Code/OrbitPlotting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Lagrange Points Code.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/PlotTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/PlotTest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/RabbitsAndSheepTest.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Lagrange Flows.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange Flows.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +48,7 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager" selected="Python.Lagrange Flows">
+  <component name="RunManager" selected="Python.OrbitPlotting">
     <configuration name="Lagrange Flows" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lagrange-Points" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -62,6 +60,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/Lagrange Flows.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OrbitPlotting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Lagrange-Points" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\mattd\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/OrbitPlotting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -113,6 +130,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.OrbitPlotting" />
         <item itemvalue="Python.Lagrange Flows" />
         <item itemvalue="Python.PlotTest" />
       </list>
@@ -144,7 +162,7 @@
       <workItem from="1579775456906" duration="1408000" />
       <workItem from="1580126196216" duration="1796000" />
       <workItem from="1580378761153" duration="3648000" />
-      <workItem from="1580732021057" duration="6137000" />
+      <workItem from="1580732021057" duration="8402000" />
     </task>
     <servers />
   </component>
