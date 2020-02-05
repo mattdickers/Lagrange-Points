@@ -152,14 +152,13 @@ class GUI:
             tkinter.messagebox.showerror("Value Error",
                                          "An non-integer or float value as entered . Please only use values that are integers or floats.")
 
-
     def PlotValues(self):
         try:
-            x = int(self.xVal.get())
-            y = int(self.yVal.get())
-            vx = int(self.vxVal.get())
-            vy = int(self.vyVal.get())
-            mu = int(self.muVal.get())
+            x = float(self.xVal.get())
+            y = float(self.yVal.get())
+            vx = float(self.vxVal.get())
+            vy = float(self.vyVal.get())
+            mu = float(self.muVal.get())
 
             filePath = asksaveasfilename(title="Save Plot", filetypes=(("PNG", "*.png"), ("All files", "*")))
             LagrangeFlowPlot([x, y, vx, vy], mu, plotVel.get())
