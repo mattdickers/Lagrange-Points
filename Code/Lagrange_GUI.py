@@ -126,7 +126,12 @@ class GUI:
         self.plotValuesButton.grid(column=1, row=8, padx=(85,0), pady=(5,0))
 
         self.plotPotentialButton = ttk.Button(self.plotFrame, text="Plot Potential", command=self.PlotPotential)
-        self.plotPotentialButton.grid(column=1, row=10, pady=(1, 0))
+        self.plotPotentialButton.grid(column=1, row=9, padx=(0,85), pady=(1, 0))
+
+        global topDown
+        topDown = IntVar()
+        self.topDown = ttk.Checkbutton(self.plotFrame, text="Top Down", variable=topDown)
+        self.topDown.grid(column=1, row=9, padx=(85, 0), pady=(1, 0))
 
 
     def PlotRandom(self):
@@ -192,7 +197,7 @@ class GUI:
             filePath = asksaveasfilename(title="Save Plot", filetypes=(
             (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
             if filePath != "":
-                Potential(float(self.muVal.get()))
+                Potential(float(self.muVal.get()), topDown.get())
                 plt.savefig(str(filePath) + str(saveFormat.get()))
                 print("Plot saved")
             else:
@@ -265,7 +270,8 @@ def Orbit(initial, mu, velocity):
     ax.text(0.05, 0.95, textstr, transform=ax.transAxes,
             verticalalignment='top', bbox=props)
 
-def Potential(mu):
+def Potential(mu, top):
+    print(top)
     def potential(x, y, mu):
         return (0.5 * (x ** 2 + y ** 2)) + ((1 - mu) / np.sqrt((x + mu) ** 2 + y ** 2)) + (
                     mu / np.sqrt((x + mu - 1) ** 2 + y ** 2))
@@ -278,10 +284,15 @@ def Potential(mu):
 
     fig = plt.figure()
     ax = plt.axes(projection='3d')
-    ax.contour3D(x, y, z, 50, cmap=cmaps[0])
+    ax.contour3D(x, y, z, 50, cmap=cmapType)
     ax.set_xlabel(r'$x$', fontsize=15)
     ax.set_ylabel(r'$y$', fontsize=15)
-    ax.set_zlabel(r'$z$', fontsize=15)
+    if top == 1:
+        ax.view_init(elev=90., azim=90)
+        ax.w_zaxis.line.set_lw(0.)
+        ax.set_zticks([])
+    else:
+        ax.set_zlabel(r'$z$', fontsize=15)
     ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)
 
 
