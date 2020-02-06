@@ -13,7 +13,7 @@ from tkinter.filedialog import *
 import tkinter.messagebox
 
 cmaps = ['plasma', 'rainbow', 'gist_rainbow']
-cmapType = cmaps[0]
+cmapType = cmaps[2]
 
 class GUI:
     def __init__(self, root):
@@ -103,35 +103,44 @@ class GUI:
         self.muHold = ttk.Checkbutton(self.inputFrame, text="Hold", variable=muHold)
         self.muHold.grid(column=1, row=6, padx=(50, 0), pady=(0, 5))
 
+        self.timeLabel = Label(self.inputFrame, text="Time:")
+        self.timeLabel.grid(column=0, row=7, padx=(0, 0), pady=(0, 5))
+
+        global timeVal
+        timeVal = StringVar()
+        self.timeVal = ttk.Entry(self.inputFrame, width=10, textvariable=timeVal)
+        self.timeVal.grid(column=1, row=7, padx=(0, 0), sticky=W, pady=(0, 5))
+        timeVal.set(20)
+
         self.PlotNumLabel = Label(self.inputFrame, text="Plots:")
-        self.PlotNumLabel.grid(column=0, row=7, padx=(0, 0), pady=(0, 5))
+        self.PlotNumLabel.grid(column=0, row=8, padx=(0, 0), pady=(0, 5))
 
         global plotNum
         plotNum = StringVar()
         self.plotNum = ttk.Entry(self.inputFrame, width=7, textvariable=plotNum)
-        self.plotNum.grid(column=1, row=7, padx=(0, 0), sticky=W, pady=(0, 5))
+        self.plotNum.grid(column=1, row=8, padx=(0, 0), sticky=W, pady=(0, 5))
 
         global plotVel
         plotVel = IntVar()
         self.plotVel = ttk.Checkbutton(self.inputFrame, text="Plot Velocity", variable=plotVel)
-        self.plotVel.grid(column=1, row=7, padx=(50, 0), pady=(0, 5))
+        self.plotVel.grid(column=1, row=8, padx=(50, 0), pady=(0, 5))
 
         self.plotFrame = Frame(self.content)
         self.plotFrame.pack()
 
         self.plotRandomButton = ttk.Button(self.plotFrame, text="Plot Random", command=self.PlotRandom)
-        self.plotRandomButton.grid(column=1, row=8,  padx=(0,85), pady=(5, 0))
+        self.plotRandomButton.grid(column=1, row=9,  padx=(0,85), pady=(5, 0))
 
         self.plotValuesButton = ttk.Button(self.plotFrame, text="Plot Values", command=self.PlotValues)
-        self.plotValuesButton.grid(column=1, row=8, padx=(85,0), pady=(5,0))
+        self.plotValuesButton.grid(column=1, row=9, padx=(85,0), pady=(5,0))
 
         self.plotPotentialButton = ttk.Button(self.plotFrame, text="Plot Potential", command=self.PlotPotential)
-        self.plotPotentialButton.grid(column=1, row=9, padx=(0,85), pady=(1, 0))
+        self.plotPotentialButton.grid(column=1, row=10, padx=(0,85), pady=(1, 0))
 
         global topDown
         topDown = IntVar()
         self.topDown = ttk.Checkbutton(self.plotFrame, text="Top Down", variable=topDown)
-        self.topDown.grid(column=1, row=9, padx=(85, 0), pady=(1, 0))
+        self.topDown.grid(column=1, row=10, padx=(85, 0), pady=(1, 0))
 
 
     def PlotRandom(self):
@@ -158,7 +167,7 @@ class GUI:
                     vy = float(self.vyVal.get())
 
                 if muHold.get() == 0:
-                    mu = round(random.random(), 2)
+                    mu = round(np.random.uniform(low=0, high=0.49), 2)
                 else:
                     mu = float(self.muVal.get())
 
@@ -214,7 +223,7 @@ def ColourConvert(rgb):
 
 def Orbit(initial, mu, velocity):
     #Data for plotting
-    t=np.arange(0.0,20.0,0.001)  # time steps
+    t=np.arange(0.0,timeVal,0.001)  # time steps
 
     def motion(state ,t):
         x, y, vx, vy = state  # unpack state vector
