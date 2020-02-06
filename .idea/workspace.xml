@@ -2,20 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Code/ContourPlots.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Lagrange_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange_GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/PlotTest.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/9.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +14,7 @@
     <session id="1629377391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="5" />
           <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="3" />
           <entry key="project.opened" value="5" />
@@ -35,50 +22,37 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3801" />
+          <entry key="py" value="4004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3801" />
+          <entry key="Python" value="4004" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="13" />
+          <entry key="py" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="13" />
+          <entry key="Python" value="15" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Code/ContourPlots.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="344">
-              <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+            <state relative-caret-position="3077">
+              <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <marker date="1580950512419" expanded="true" signature="394:399" ph="..." />
-                <marker date="1580950512419" expanded="true" signature="4801:4806" ph="..." />
-                <marker date="1580950512419" expanded="true" signature="9373:9993" ph="..." />
+                <marker date="1580952116420" expanded="true" signature="394:399" ph="..." />
+                <marker date="1580952116420" expanded="true" signature="5077:5082" ph="..." />
               </folding>
             </state>
           </provider>
@@ -102,6 +76,8 @@
       <find>label</find>
       <find>lab</find>
       <find>check</find>
+      <find>drop</find>
+      <find>lineStyle</find>
       <find>save</find>
     </findStrings>
   </component>
@@ -116,6 +92,7 @@
         <option value="$PROJECT_DIR$/Code/Plots/ContourPlots.py" />
         <option value="$PROJECT_DIR$/Code/Lagrange Flows.py" />
         <option value="$PROJECT_DIR$/Code/ContourPlots.py" />
+        <option value="$PROJECT_DIR$/../../GraphPlotter/GraphPlotter.py" />
         <option value="$PROJECT_DIR$/Code/Lagrange_GUI.py" />
       </list>
     </option>
@@ -374,9 +351,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -395,7 +371,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32089552" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32089552" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -456,13 +432,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Code/OLD.py" />
-    <entry file="file://$PROJECT_DIR$/../../GraphPlotter/GraphPlotter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="867" selection-start-line="867" selection-end-line="867" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Lagrange Flows.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -496,15 +465,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../GraphPlotter/GraphPlotter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="367" column="112" lean-forward="true" selection-start-line="365" selection-start-column="12" selection-end-line="367" selection-end-column="112" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+        <state relative-caret-position="3077">
+          <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <marker date="1580950512419" expanded="true" signature="394:399" ph="..." />
-            <marker date="1580950512419" expanded="true" signature="4801:4806" ph="..." />
-            <marker date="1580950512419" expanded="true" signature="9373:9993" ph="..." />
+            <marker date="1580952116420" expanded="true" signature="394:399" ph="..." />
+            <marker date="1580952116420" expanded="true" signature="5077:5082" ph="..." />
           </folding>
         </state>
       </provider>

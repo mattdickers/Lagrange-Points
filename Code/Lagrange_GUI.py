@@ -32,6 +32,12 @@ class GUI:
         self.initialLabel = Label(self.inputFrame, text="Initial Conditions:")
         self.initialLabel.grid(column=0, row=1, columnspan=2, sticky=W)
 
+        global saveFormat
+        saveFormat = StringVar()
+        saveFormat.set("Select")
+        self.saveFormat = ttk.OptionMenu(self.inputFrame, saveFormat, ".png", *[".png", ".svg"])
+        self.saveFormat.grid(column=1, row=1, padx=(60,0))
+
         self.xLabel = Label(self.inputFrame, text="x:")
         self.xLabel.grid(column=0, row=2, padx=(0, 0), pady=(0,5))
 
@@ -114,10 +120,10 @@ class GUI:
         self.plotFrame.pack()
 
         self.plotRandomButton = ttk.Button(self.plotFrame, text="Plot Random", command=self.PlotRandom)
-        self.plotRandomButton.grid(column=1, row=8, pady=(5, 0))
+        self.plotRandomButton.grid(column=1, row=8,  padx=(0,85), pady=(5, 0))
 
         self.plotValuesButton = ttk.Button(self.plotFrame, text="Plot Values", command=self.PlotValues)
-        self.plotValuesButton.grid(column=1, row=9, pady=(1,0))
+        self.plotValuesButton.grid(column=1, row=8, padx=(85,0), pady=(5,0))
 
         self.plotPotentialButton = ttk.Button(self.plotFrame, text="Plot Potential", command=self.PlotPotential)
         self.plotPotentialButton.grid(column=1, row=10, pady=(1, 0))
@@ -167,11 +173,15 @@ class GUI:
             vy = float(self.vyVal.get())
             mu = float(self.muVal.get())
 
-            filePath = asksaveasfilename(title="Save Plot", filetypes=(("PNG", "*.png"), ("All files", "*")))
-            Orbit([x, y, vx, vy], mu, plotVel.get())
-            plt.savefig(str(filePath) + ".png")
-            print("Plot saved")
-
+            filePath = asksaveasfilename(title="Save Plot", filetypes=(
+            (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
+            if filePath != "":
+                Orbit([x, y, vx, vy], mu, plotVel.get())
+                plt.savefig(str(filePath) + str(saveFormat.get()))
+                print("Plot Saved")
+            else:
+                tkinter.messagebox.showerror("Save Error",
+                                             "There is no file name. Please provide a file name and try again.")
         except ValueError:
             tkinter.messagebox.showerror("Value Error",
                                          "An non-integer or float value as entered . Please only use values that are integers or floats.")
@@ -179,14 +189,18 @@ class GUI:
 
     def PlotPotential(self):
         try:
-            filePath = asksaveasfilename(title="Save Plot", filetypes=(("PNG", "*.png"), ("All files", "*")))
-            Potential(float(self.muVal.get()))
-            plt.savefig(str(filePath) + ".png")
-            print("Plot saved")
+            filePath = asksaveasfilename(title="Save Plot", filetypes=(
+            (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
+            if filePath != "":
+                Potential(float(self.muVal.get()))
+                plt.savefig(str(filePath) + str(saveFormat.get()))
+                print("Plot saved")
+            else:
+                tkinter.messagebox.showerror("Save Error",
+                                             "There is no file name. Please provide a file name and try again.")
         except ValueError:
             tkinter.messagebox.showerror("Value Error",
                                          "An non-integer or float value as entered . Please only use values that are integers or floats.")
-
 
 
 
@@ -277,7 +291,7 @@ GUI = GUI(root)
 
 root.wm_title("")
 
-root.geometry("180x280")
+root.geometry("180x257")
 
 root.resizable(width=False, height=False)
 
