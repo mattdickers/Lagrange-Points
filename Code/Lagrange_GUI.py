@@ -159,7 +159,6 @@ class GUI:
             tkinter.messagebox.showerror("Value Error",
                                          "An non-integer or float value as entered . Please only use values that are integers or floats.")
 
-
     def PlotValues(self):
         try:
             x = float(self.xVal.get())
