@@ -13,7 +13,7 @@ from tkinter.filedialog import *
 import tkinter.messagebox
 
 cmaps = ['plasma', 'rainbow', 'gist_rainbow']
-cmapType = cmaps[0]
+cmapType = cmaps[2]
 
 class GUI:
     def __init__(self, root):

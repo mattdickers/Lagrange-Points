@@ -3,6 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/Code/Lagrange_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange_GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/9.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,20 +24,20 @@
     <session id="1629377391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="5" />
-          <entry key="project.open.time.5" value="2" />
+          <entry key="project.closed" value="6" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="3" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="4004" />
+          <entry key="py" value="4005" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4004" />
+          <entry key="Python" value="4005" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -43,16 +53,16 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3077">
-              <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
+            <state relative-caret-position="255">
+              <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
-                <marker date="1580952116420" expanded="true" signature="394:399" ph="..." />
-                <marker date="1580952116420" expanded="true" signature="5077:5082" ph="..." />
+                <marker date="1580952385181" expanded="true" signature="394:399" ph="..." />
+                <marker date="1580952385181" expanded="true" signature="5077:5082" ph="..." />
               </folding>
             </state>
           </provider>
@@ -118,7 +128,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,6 +144,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -179,6 +189,9 @@
       <module name="Lagrange-Points" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="C:\Users\mattd\AppData\Local\Programs\Python\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -352,7 +365,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17430703" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -371,7 +384,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.32089552" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32089552" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
@@ -436,22 +449,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/PlotTest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/PlotTest.py" />
     <entry file="file://$PROJECT_DIR$/Code/OrbitPlotting.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -459,9 +464,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -474,12 +476,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3077">
-          <caret line="181" column="17" lean-forward="true" selection-start-line="181" selection-start-column="17" selection-end-line="181" selection-end-column="17" />
+        <state relative-caret-position="255">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-            <marker date="1580952116420" expanded="true" signature="394:399" ph="..." />
-            <marker date="1580952116420" expanded="true" signature="5077:5082" ph="..." />
+            <marker date="1580952385181" expanded="true" signature="394:399" ph="..." />
+            <marker date="1580952385181" expanded="true" signature="5077:5082" ph="..." />
           </folding>
         </state>
       </provider>
