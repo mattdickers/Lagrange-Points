@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Code/ContourPlots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Lagrange_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange_GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/PlotTest.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/10.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/2.png" afterDir="false" />
@@ -25,35 +28,63 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="4" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.5" value="2" />
           <entry key="project.open.time.6" value="3" />
-          <entry key="project.opened" value="4" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3241" />
+          <entry key="py" value="3801" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3241" />
+          <entry key="Python" value="3801" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="6" />
+          <entry key="py" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="6" />
+          <entry key="Python" value="13" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Code/ContourPlots.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+                <marker date="1580950512419" expanded="true" signature="394:399" ph="..." />
+                <marker date="1580950512419" expanded="true" signature="4801:4806" ph="..." />
+                <marker date="1580950512419" expanded="true" signature="9373:9993" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,6 +113,9 @@
       <list>
         <option value="$PROJECT_DIR$/Code/OrbitPlotting.py" />
         <option value="$PROJECT_DIR$/Code/OLD.py" />
+        <option value="$PROJECT_DIR$/Code/Plots/ContourPlots.py" />
+        <option value="$PROJECT_DIR$/Code/Lagrange Flows.py" />
+        <option value="$PROJECT_DIR$/Code/ContourPlots.py" />
         <option value="$PROJECT_DIR$/Code/Lagrange_GUI.py" />
       </list>
     </option>
@@ -144,6 +178,9 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code" />
     </key>
@@ -161,6 +198,25 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Lagrange_GUI">
+    <configuration name="ContourPlots" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Lagrange-Points" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="C:\Users\mattd\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code\ContourPlots.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Lagrange Flows" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lagrange-Points" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -274,10 +330,12 @@
       <item itemvalue="Python.OrbitPlotting" />
       <item itemvalue="Python.PlotTest" />
       <item itemvalue="Python.Lagrange_GUI" />
+      <item itemvalue="Python.ContourPlots" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Lagrange_GUI" />
+        <item itemvalue="Python.ContourPlots" />
         <item itemvalue="Python.OrbitPlotting" />
         <item itemvalue="Python.Lagrange Flows" />
         <item itemvalue="Python.PlotTest" />
@@ -316,8 +374,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17110874" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17270789" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -396,16 +455,6 @@
     <state x="346" y="49" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1580734852496" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Code/PlotTest.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Lagrange Flows.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="21" selection-start-line="21" selection-end-line="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Code/OLD.py" />
     <entry file="file://$PROJECT_DIR$/../../GraphPlotter/GraphPlotter.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -414,24 +463,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
+    <entry file="file://$PROJECT_DIR$/Code/Lagrange Flows.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-677">
-          <caret line="160" column="38" lean-forward="true" selection-start-line="160" selection-start-column="38" selection-end-line="160" selection-end-column="38" />
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1580890490703" expanded="true" signature="294:299" ph="..." />
-            <marker date="1580890490703" expanded="true" signature="4514:4520" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Code/PlotTest.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/Code/OrbitPlotting.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="81" column="4" selection-start-line="81" selection-start-column="4" selection-end-line="81" selection-end-column="43" />
+        <state relative-caret-position="270">
+          <caret line="57" column="30" lean-forward="true" selection-start-line="57" selection-start-column="8" selection-end-line="57" selection-end-column="30" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/ContourPlots.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="25" column="59" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1580950512419" expanded="true" signature="394:399" ph="..." />
+            <marker date="1580950512419" expanded="true" signature="4801:4806" ph="..." />
+            <marker date="1580950512419" expanded="true" signature="9373:9993" ph="..." />
           </folding>
         </state>
       </provider>

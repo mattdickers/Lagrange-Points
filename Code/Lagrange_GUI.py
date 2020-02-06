@@ -1,3 +1,4 @@
+from mpl_toolkits import mplot3d
 import numpy as np
 from scipy.integrate import odeint
 import random
@@ -11,6 +12,9 @@ from tkinter import ttk
 from tkinter.filedialog import *
 import tkinter.messagebox
 
+cmaps = ['plasma', 'rainbow', 'gist_rainbow']
+cmapType = cmaps[0]
+
 class GUI:
     def __init__(self, root):
         self.content = Frame(root)
@@ -19,7 +23,7 @@ class GUI:
         self.titleFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
         self.titleFrame.pack()
 
-        self.title = Label(self.titleFrame, text="Orbit Plotter")
+        self.title = Label(self.titleFrame, text="Lagrange Plotter")
         self.title.grid(column=0, row=0)
 
         self.inputFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
@@ -115,6 +119,9 @@ class GUI:
         self.plotValuesButton = ttk.Button(self.plotFrame, text="Plot Values", command=self.PlotValues)
         self.plotValuesButton.grid(column=1, row=9, pady=(1,0))
 
+        self.plotPotentialButton = ttk.Button(self.plotFrame, text="Plot Potential", command=self.PlotPotential)
+        self.plotPotentialButton.grid(column=1, row=10, pady=(1, 0))
+
 
     def PlotRandom(self):
         try:
@@ -144,7 +151,7 @@ class GUI:
                 else:
                     mu = float(self.muVal.get())
 
-                LagrangeFlowPlot([x, y, vx, vy], mu, plotVel.get())
+                Orbit([x, y, vx, vy], mu, plotVel.get())
                 plt.savefig("Plots\\" + str(plot) + ".png")
                 print("Plot", str(plot), "saved")
 
@@ -155,14 +162,14 @@ class GUI:
 
     def PlotValues(self):
         try:
-            x = int(self.xVal.get())
-            y = int(self.yVal.get())
-            vx = int(self.vxVal.get())
-            vy = int(self.vyVal.get())
-            mu = int(self.muVal.get())
+            x = float(self.xVal.get())
+            y = float(self.yVal.get())
+            vx = float(self.vxVal.get())
+            vy = float(self.vyVal.get())
+            mu = float(self.muVal.get())
 
             filePath = asksaveasfilename(title="Save Plot", filetypes=(("PNG", "*.png"), ("All files", "*")))
-            LagrangeFlowPlot([x, y, vx, vy], mu, plotVel.get())
+            Orbit([x, y, vx, vy], mu, plotVel.get())
             plt.savefig(str(filePath) + ".png")
             print("Plot saved")
 
@@ -170,10 +177,24 @@ class GUI:
             tkinter.messagebox.showerror("Value Error",
                                          "An non-integer or float value as entered . Please only use values that are integers or floats.")
 
+
+    def PlotPotential(self):
+        try:
+            filePath = asksaveasfilename(title="Save Plot", filetypes=(("PNG", "*.png"), ("All files", "*")))
+            Potential(float(self.muVal.get()))
+            plt.savefig(str(filePath) + ".png")
+            print("Plot saved")
+        except ValueError:
+            tkinter.messagebox.showerror("Value Error",
+                                         "An non-integer or float value as entered . Please only use values that are integers or floats.")
+
+
+
+
 def ColourConvert(rgb):
     return "#%02x%02x%02x" % (int(rgb[0]), int(rgb[1]), int(rgb[2]))
 
-def LagrangeFlowPlot(initial, mu, velocity):
+def Orbit(initial, mu, velocity):
     #Data for plotting
     t=np.arange(0.0,20.0,0.001)  # time steps
 
@@ -198,7 +219,7 @@ def LagrangeFlowPlot(initial, mu, velocity):
         segments = np.concatenate([points[:-1], points[1:]], axis=1)
 
         norm = plt.Normalize(vel.min(), vel.max())
-        lc = LineCollection(segments, cmap='plasma', norm=norm)
+        lc = LineCollection(segments, cmap=cmapType, norm=norm)
         lc.set_array(vel)
         lc.set_linewidth(2)
         line = ax.add_collection(lc)
@@ -211,12 +232,12 @@ def LagrangeFlowPlot(initial, mu, velocity):
 
 
     #Plot Other Masses:
-    ax.plot(-mu,0,'bo',markersize=10)
-    ax.plot(1 - mu,0,'bo',markersize=10)
+    ax.plot(-mu,0,'bo' ,markersize=10)
+    ax.plot(1 - mu,0,'bo', markersize=10)
 
-    ax.set_title(r"Flow Diagram of the mass $m_3$",fontsize=16)
-    ax.set_xlabel("$x$",fontsize=15)
-    ax.set_ylabel("$y$",fontsize=15)
+    ax.set_title(r"Flow Diagram of the mass $m_3$", fontsize=16)
+    ax.set_xlabel("$x$", fontsize=15)
+    ax.set_ylabel("$y$", fontsize=15)
 
     textstr = '\n'.join((
         r'Initial Conditions',
@@ -231,13 +252,33 @@ def LagrangeFlowPlot(initial, mu, velocity):
     ax.text(0.05, 0.95, textstr, transform=ax.transAxes,
             verticalalignment='top', bbox=props)
 
+def Potential(mu):
+    def potential(x, y, mu):
+        return (0.5 * (x ** 2 + y ** 2)) + ((1 - mu) / np.sqrt((x + mu) ** 2 + y ** 2)) + (
+                    mu / np.sqrt((x + mu - 1) ** 2 + y ** 2))
+
+    x = np.linspace(-2, 2, 30)
+    y = np.linspace(-2, 2, 30)
+
+    x, y = np.meshgrid(x, y)
+    z = potential(x, y, mu)
+
+    fig = plt.figure()
+    ax = plt.axes(projection='3d')
+    ax.contour3D(x, y, z, 50, cmap=cmaps[0])
+    ax.set_xlabel(r'$x$', fontsize=15)
+    ax.set_ylabel(r'$y$', fontsize=15)
+    ax.set_zlabel(r'$z$', fontsize=15)
+    ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)
+
+
 root = Tk()
 
 GUI = GUI(root)
 
 root.wm_title("")
 
-root.geometry("180x257")
+root.geometry("180x280")
 
 root.resizable(width=False, height=False)
 
