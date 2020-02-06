@@ -271,7 +271,6 @@ def Orbit(initial, mu, velocity):
             verticalalignment='top', bbox=props)
 
 def Potential(mu, top):
-    print(top)
     def potential(x, y, mu):
         return (0.5 * (x ** 2 + y ** 2)) + ((1 - mu) / np.sqrt((x + mu) ** 2 + y ** 2)) + (
                     mu / np.sqrt((x + mu - 1) ** 2 + y ** 2))
