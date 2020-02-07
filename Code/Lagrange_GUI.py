@@ -13,7 +13,9 @@ from tkinter.filedialog import *
 import tkinter.messagebox
 
 cmaps = ['plasma', 'rainbow', 'gist_rainbow']
-cmapType = cmaps[2]
+cmapType = cmaps[0]
+defailtTimeVal = 20
+defailtTimeStepVal = 0.001
 
 class GUI:
     def __init__(self, root):
@@ -108,9 +110,18 @@ class GUI:
 
         global timeVal
         timeVal = StringVar()
-        self.timeVal = ttk.Entry(self.inputFrame, width=10, textvariable=timeVal)
+        self.timeVal = ttk.Entry(self.inputFrame, width=7, textvariable=timeVal)
         self.timeVal.grid(column=1, row=7, padx=(0, 0), sticky=W, pady=(0, 5))
-        timeVal.set(20)
+        timeVal.set(defailtTimeVal)
+
+        self.timeStepLabel = Label(self.inputFrame, text="Step:")
+        self.timeStepLabel.grid(column=1, row=7, padx=(0, 0), pady=(0, 5))
+
+        global timeStepVal
+        timeStepVal = StringVar()
+        self.timeStepVal = ttk.Entry(self.inputFrame, width=7, textvariable=timeStepVal)
+        self.timeStepVal.grid(column=1, row=7, padx=(85, 0), sticky=W, pady=(0, 5))
+        timeStepVal.set(defailtTimeStepVal)
 
         self.PlotNumLabel = Label(self.inputFrame, text="Plots:")
         self.PlotNumLabel.grid(column=0, row=8, padx=(0, 0), pady=(0, 5))
@@ -144,77 +155,95 @@ class GUI:
 
 
     def PlotRandom(self):
-        try:
-            for plot in range(1, int(self.plotNum.get()) + 1):
-                if xHold.get() == 0:
-                    x = random.randint(-5, 5)
-                else:
-                    x = float(self.xVal.get())
-
-                if yHold.get() == 0:
-                    y = random.randint(-5, 5)
-                else:
-                    y = float(self.yVal.get())
-
-                if vxHold.get() == 0:
-                    vx = random.randint(-5, 5)
-                else:
-                    vx = float(self.vxVal.get())
-
-                if vyHold.get() == 0:
-                    vy = random.randint(-5, 5)
-                else:
-                    vy = float(self.vyVal.get())
-
-                if muHold.get() == 0:
-                    mu = round(np.random.uniform(low=0, high=0.49), 2)
-                else:
-                    mu = float(self.muVal.get())
-
-                Orbit([x, y, vx, vy], mu, plotVel.get())
-                plt.savefig("Plots\\" + str(plot) + ".png")
-                print("Plot", str(plot), "saved")
-
-        except ValueError:
+        empty = False
+        if self.muVal.get() == "":
+            empty = True
+            muVal.set(0)
+        if (float(self.muVal.get()) < 0.01 or float(self.muVal.get()) > 0.49) and muHold.get() == 1:
             tkinter.messagebox.showerror("Value Error",
-                                         "An non-integer or float value as entered . Please only use values that are integers or floats.")
+                                             "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
+        else:
+            try:
+                for plot in range(1, int(self.plotNum.get()) + 1):
+                    if xHold.get() == 0:
+                        x = random.randint(-5, 5)
+                    else:
+                        x = float(self.xVal.get())
+
+                    if yHold.get() == 0:
+                        y = random.randint(-5, 5)
+                    else:
+                        y = float(self.yVal.get())
+
+                    if vxHold.get() == 0:
+                        vx = random.randint(-5, 5)
+                    else:
+                        vx = float(self.vxVal.get())
+
+                    if vyHold.get() == 0:
+                        vy = random.randint(-5, 5)
+                    else:
+                        vy = float(self.vyVal.get())
+
+                    if muHold.get() == 0:
+                        mu = round(np.random.uniform(low=0.01, high=0.49), 2)
+                    else:
+                        mu = float(self.muVal.get())
+
+                    Orbit([x, y, vx, vy], mu, plotVel.get())
+                    plt.savefig("Plots\\" + str(plot) + str(saveFormat.get()))
+                    print("Plot", str(plot), "saved")
+                    if empty:
+                        muVal.set("")
+
+            except ValueError:
+                tkinter.messagebox.showerror("Value Error",
+                                             "A non-integer float value, or no value, has been entered. Please only use values that are integers or floats.")
 
     def PlotValues(self):
-        try:
-            x = float(self.xVal.get())
-            y = float(self.yVal.get())
-            vx = float(self.vxVal.get())
-            vy = float(self.vyVal.get())
-            mu = float(self.muVal.get())
-
-            filePath = asksaveasfilename(title="Save Plot", filetypes=(
-            (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
-            if filePath != "":
-                Orbit([x, y, vx, vy], mu, plotVel.get())
-                plt.savefig(str(filePath) + str(saveFormat.get()))
-                print("Plot Saved")
-            else:
-                tkinter.messagebox.showerror("Save Error",
-                                             "There is no file name. Please provide a file name and try again.")
-        except ValueError:
+        if float(self.muVal.get()) < 0.01 or float(self.muVal.get()) > 0.49:
             tkinter.messagebox.showerror("Value Error",
-                                         "An non-integer or float value as entered . Please only use values that are integers or floats.")
+                                         "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
+        else:
+            try:
+                x = float(self.xVal.get())
+                y = float(self.yVal.get())
+                vx = float(self.vxVal.get())
+                vy = float(self.vyVal.get())
+                mu = float(self.muVal.get())
+
+                filePath = asksaveasfilename(title="Save Plot", filetypes=(
+                (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
+                if filePath != "":
+                    Orbit([x, y, vx, vy], mu, plotVel.get())
+                    plt.savefig(str(filePath) + str(saveFormat.get()))
+                    print("Plot Saved")
+                else:
+                    tkinter.messagebox.showerror("Save Error",
+                                                 "There is no file name. Please provide a file name and try again.")
+            except ValueError:
+                tkinter.messagebox.showerror("Value Error",
+                                             "A non-integer float value, or no value, has been entered. Please only use values that are integers or floats.")
 
 
     def PlotPotential(self):
-        try:
-            filePath = asksaveasfilename(title="Save Plot", filetypes=(
-            (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
-            if filePath != "":
-                Potential(float(self.muVal.get()), topDown.get())
-                plt.savefig(str(filePath) + str(saveFormat.get()))
-                print("Plot saved")
-            else:
-                tkinter.messagebox.showerror("Save Error",
-                                             "There is no file name. Please provide a file name and try again.")
-        except ValueError:
+        if float(self.muVal.get()) < 0.01 or float(self.muVal.get()) > 0.49:
             tkinter.messagebox.showerror("Value Error",
-                                         "An non-integer or float value as entered . Please only use values that are integers or floats.")
+                                         "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
+        else:
+            try:
+                filePath = asksaveasfilename(title="Save Plot", filetypes=(
+                (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
+                if filePath != "":
+                    Potential(float(self.muVal.get()), topDown.get())
+                    plt.savefig(str(filePath) + str(saveFormat.get()))
+                    print("Plot saved")
+                else:
+                    tkinter.messagebox.showerror("Save Error",
+                                                 "There is no file name. Please provide a file name and try again.")
+            except ValueError:
+                tkinter.messagebox.showerror("Value Error",
+                                             "A non-integer float value, or no value, has been entered. Please only use values that are integers or floats.")
 
 
 
@@ -223,7 +252,7 @@ def ColourConvert(rgb):
 
 def Orbit(initial, mu, velocity):
     #Data for plotting
-    t=np.arange(0.0,timeVal,0.001)  # time steps
+    t=np.arange(0.0,float(timeVal.get()),float(timeStepVal.get()))  # time steps
 
     def motion(state ,t):
         x, y, vx, vy = state  # unpack state vector
@@ -310,7 +339,7 @@ GUI = GUI(root)
 
 root.wm_title("")
 
-root.geometry("180x257")
+root.geometry("180x285")
 
 root.resizable(width=False, height=False)
 
