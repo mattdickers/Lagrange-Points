@@ -159,7 +159,7 @@ class GUI:
         if self.muVal.get() == "":
             empty = True
             muVal.set(0)
-        if (float(self.muVal.get()) < 0.01 or float(self.muVal.get()) > 0.49) and muHold.get() == 1:
+        if (float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5) and muHold.get() == 1:
             tkinter.messagebox.showerror("Value Error",
                                              "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
         else:
@@ -201,7 +201,7 @@ class GUI:
                                              "A non-integer float value, or no value, has been entered. Please only use values that are integers or floats.")
 
     def PlotValues(self):
-        if float(self.muVal.get()) < 0.01 or float(self.muVal.get()) > 0.49:
+        if float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5:
             tkinter.messagebox.showerror("Value Error",
                                          "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
         else:
@@ -227,7 +227,7 @@ class GUI:
 
 
     def PlotPotential(self):
-        if float(self.muVal.get()) < 0.01 or float(self.muVal.get()) > 0.49:
+        if float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5:
             tkinter.messagebox.showerror("Value Error",
                                          "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
         else:
@@ -328,6 +328,7 @@ def Potential(mu, top):
         ax.view_init(elev=90., azim=90)
         ax.w_zaxis.line.set_lw(0.)
         ax.set_zticks([])
+        ax.dist = 7
     else:
         ax.set_zlabel(r'$z$', fontsize=15)
     ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)

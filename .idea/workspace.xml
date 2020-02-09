@@ -2,6 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Code/Numerical Solution Plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/1-1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/2866.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/3381.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/3583.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/3977.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/6941.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/6_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/7_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/856.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interesting Plots/974.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Lagrange_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange_GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/10.png" afterDir="false" />
@@ -13,7 +32,6 @@
       <change beforePath="$PROJECT_DIR$/Code/Plots/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/7.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/8.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/njfdsnjdfsnjdfsnjdfskj.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -25,40 +43,44 @@
     <session id="1629377391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="py" value="5" />
+          <entry key="svg" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="Python" value="5" />
+          <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="523" />
+          <entry key="py" value="1896" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="523" />
+          <entry key="Python" value="1896" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+            <state relative-caret-position="180">
+              <caret line="316" column="30" lean-forward="true" selection-start-line="316" selection-start-column="30" selection-end-line="316" selection-end-column="30" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -86,9 +108,11 @@
       <find>check</find>
       <find>drop</find>
       <find>lineStyle</find>
-      <find>save</find>
       <find>tkinter</find>
       <find>Time</find>
+      <find>save</find>
+      <find>grid</find>
+      <find>ax.grid</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -97,6 +121,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Code/Numerical Solution Plot.py" />
         <option value="$PROJECT_DIR$/Code/Lagrange_GUI.py" />
       </list>
     </option>
@@ -159,10 +184,10 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code" />
     </key>
   </component>
@@ -242,6 +267,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Numerical Solution Plot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Lagrange-Points" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\mattd\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/Numerical Solution Plot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="OrbitPlotting" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Lagrange-Points" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -256,28 +303,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/OrbitPlotting.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="true" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="PlotTest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Lagrange-Points" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\Users\mattd\AppData\Local\Programs\Python\Python37\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Code/PlotTest.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -314,15 +339,15 @@
       <item itemvalue="Python.Lagrange Flows" />
       <item itemvalue="Python.Lagrange_GUI" />
       <item itemvalue="Python.OrbitPlotting" />
-      <item itemvalue="Python.PlotTest" />
+      <item itemvalue="Python.Numerical Solution Plot" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Lagrange_GUI" />
+        <item itemvalue="Python.Numerical Solution Plot" />
         <item itemvalue="Python.ContourPlots" />
         <item itemvalue="Python.OrbitPlotting" />
         <item itemvalue="Python.Lagrange Flows" />
-        <item itemvalue="Python.PlotTest" />
       </list>
     </recent_temporary>
   </component>
@@ -361,15 +386,9 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18710022" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1913646" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -377,11 +396,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" visible="true" weight="0.2531983" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.24520256" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,16 +446,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/OrbitPlotting.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Plot.svg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Numerical Solution Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+        <state relative-caret-position="180">
+          <caret line="316" column="30" lean-forward="true" selection-start-line="316" selection-start-column="30" selection-end-line="316" selection-end-column="30" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
