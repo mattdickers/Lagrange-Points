@@ -5,13 +5,13 @@ plt.rc('mathtext', fontset="cm")
 
 cmaps = ['plasma', 'rainbow', 'gist_rainbow']
 cmapType = cmaps[0]
-top = 0
+top = 1
 
 
 def potential(x, y, mu):
     return (0.5*(x**2 + y**2)) + ((1-mu)/np.sqrt((x + mu)**2 + y**2)) + (mu/np.sqrt((x + mu - 1)**2 + y**2))
 
-mu=0.5
+mu=0.25
 x = np.linspace(-2, 2, 30)
 y = np.linspace(-2, 2, 30)
 
@@ -21,6 +21,7 @@ z = potential(x, y, mu)
 fig = plt.figure()
 ax = plt.axes(projection='3d')
 ax.contour3D(x, y, z, 50, cmap=cmapType)
+ax.invert_xaxis()
 ax.set_xlabel(r'$x$', fontsize=15)
 ax.set_ylabel(r'$y$', fontsize=15)
 if top == 1:

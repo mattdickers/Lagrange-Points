@@ -322,6 +322,7 @@ def Potential(mu, top):
     fig = plt.figure()
     ax = plt.axes(projection='3d')
     ax.contour3D(x, y, z, 50, cmap=cmapType)
+    ax.invert_xaxis()
     ax.set_xlabel(r'$x$', fontsize=15)
     ax.set_ylabel(r'$y$', fontsize=15)
     if top == 1:
