@@ -280,7 +280,7 @@ def Orbit(initial, mu, velocity):
         lc.set_linewidth(2)
         line = ax.add_collection(lc)
         cbar = fig.colorbar(line, ax=ax)
-        cbar.ax.set_ylabel('Veclocity', rotation='vertical', fontsize=15)
+        cbar.ax.set_ylabel('Magnitude of Veclocity', rotation='vertical', fontsize=15)
 
     else:
         #Can be used to plot if not using velcoity gradient:
