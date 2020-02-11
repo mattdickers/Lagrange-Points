@@ -155,14 +155,14 @@ class GUI:
 
 
     def PlotRandom(self):
-        empty = False
-        if self.muVal.get() == "":
-            empty = True
-            muVal.set(0)
-        if (float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5) and muHold.get() == 1:
-            tkinter.messagebox.showerror("Value Error",
-                                             "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
-        else:
+        #empty = False
+        #if self.muVal.get() == "":
+        #    empty = True
+        #    muVal.set(0)
+        #if (float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5) and muHold.get() == 1:
+        #    tkinter.messagebox.showerror("Value Error",
+        #                                     "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
+        #else:
             try:
                 for plot in range(1, int(self.plotNum.get()) + 1):
                     if xHold.get() == 0:
@@ -186,25 +186,26 @@ class GUI:
                         vy = float(self.vyVal.get())
 
                     if muHold.get() == 0:
-                        mu = round(np.random.uniform(low=0.01, high=0.49), 2)
+                        #mu = round(np.random.uniform(low=0.01, high=0.49), 2)
+                        mu = round(np.random.uniform(low=0, high=1), 2)
                     else:
                         mu = float(self.muVal.get())
 
                     Orbit([x, y, vx, vy], mu, plotVel.get())
                     plt.savefig("Plots\\" + str(plot) + str(saveFormat.get()))
                     print("Plot", str(plot), "saved")
-                    if empty:
-                        muVal.set("")
+                    #if empty:
+                    #    muVal.set("")
 
             except ValueError:
                 tkinter.messagebox.showerror("Value Error",
                                              "A non-integer float value, or no value, has been entered. Please only use values that are integers or floats.")
 
     def PlotValues(self):
-        if float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5:
-            tkinter.messagebox.showerror("Value Error",
-                                         "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
-        else:
+        #if float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5:
+        #    tkinter.messagebox.showerror("Value Error",
+        #                                 "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
+        #else:
             try:
                 x = float(self.xVal.get())
                 y = float(self.yVal.get())
@@ -227,10 +228,10 @@ class GUI:
 
 
     def PlotPotential(self):
-        if float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5:
-            tkinter.messagebox.showerror("Value Error",
-                                         "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
-        else:
+        #if float(self.muVal.get()) < 0 or float(self.muVal.get()) > 0.5:
+        #    tkinter.messagebox.showerror("Value Error",
+        #                                 "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
+        #else:
             try:
                 filePath = asksaveasfilename(title="Save Plot", filetypes=(
                 (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
@@ -284,14 +285,15 @@ def Orbit(initial, mu, velocity):
 
     else:
         #Can be used to plot if not using velcoity gradient:
-        flow=ax.plot(states[:,0],states[:,1])[0]
+        flow=ax.plot(states[:,0],states[:,1],'k')[0]
 
 
     #Plot Other Masses:
-    ax.plot(-mu,0,'bo' ,markersize=10)
-    ax.plot(1 - mu,0,'bo', markersize=10)
+    size = 10
+    ax.plot(-mu,0,'ko' ,markersize=((1 - mu)*size))
+    ax.plot(1 - mu,0,'ko', markersize=(mu * size))
 
-    ax.set_title(r"Flow Diagram of the mass $m_3$", fontsize=16)
+    ax.set_title(r"Plot of the Orbit of a mass $m_3$", fontsize=16)
     ax.set_xlabel("$x$", fontsize=15)
     ax.set_ylabel("$y$", fontsize=15)
 
