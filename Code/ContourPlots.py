@@ -28,6 +28,7 @@ if top == 1:
     ax.view_init(elev=90., azim=90)
     ax.w_zaxis.line.set_lw(0.)
     ax.set_zticks([])
+    dist = 7
 else:
     ax.set_zlabel(r'$z$', fontsize=15)
 ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)
