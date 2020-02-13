@@ -6,7 +6,7 @@ eqtn = r"$f(x)=-\frac{\left(1-\mu\right)\left(x+\mu\right)}{\left|\left(x+\mu\ri
 
 plt.grid()
 
-mu = 0.25
+mu = 0.5
 
 plt.axhline(linewidth=1, color='k')
 plt.axvline(linewidth=1, color='k')

@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 
-mu=0.5
+mu=0.35
 top = 1
 
 def potential(x, y, mu):

@@ -290,8 +290,8 @@ def Orbit(initial, mu, velocity):
 
     #Plot Other Masses:
     size = 10
-    ax.plot(-mu,0,'ko' ,markersize=((1 - mu)*size))
-    ax.plot(1 - mu,0,'ko', markersize=(mu * size))
+    ax.plot(-mu,0,'ro' ,markersize=((1 - mu)*size))
+    ax.plot(1 - mu,0,'ro', markersize=(mu * size))
 
     ax.set_title(r"Plot of the Orbit of a mass $m_3$", fontsize=16)
     ax.set_xlabel("$x$", fontsize=15)

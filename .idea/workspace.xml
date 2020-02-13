@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Interactive Potentials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Interactive Potentials.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Lagrange_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange_GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Numerical Solution Plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Numerical Solution Plot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/10.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/100.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/100.png" afterDir="false" />
@@ -42,7 +44,6 @@
       <change beforePath="$PROJECT_DIR$/Code/Plots/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/40.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/41.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/Plots/43.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/44.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/45.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Code/Plots/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/46.png" afterDir="false" />
@@ -129,53 +130,40 @@
     <session id="1629377391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.5" value="1" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.5" value="3" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="png" value="1" />
-          <entry key="py" value="1" />
+          <entry key="py" value="2" />
           <entry key="svg" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="1" />
-          <entry key="Python" value="1" />
+          <entry key="Python" value="2" />
           <entry key="SVG" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="204" />
+          <entry key="py" value="219" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="204" />
+          <entry key="Python" value="219" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4784">
-              <caret selection-end-column="32" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -184,12 +172,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>round</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/Code/Numerical Solution Plot.py" />
         <option value="$PROJECT_DIR$/Code/Lagrange_GUI.py" />
       </list>
     </option>
@@ -215,7 +209,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -232,6 +225,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -454,10 +448,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14872068" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15279879" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -472,11 +465,11 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.329718" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3295082" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32995737" />
+      <window_info active="true" anchor="right" id="SciView" order="3" visible="true" weight="0.32980332" />
       <window_info anchor="right" id="Database" order="4" weight="0.32995737" />
     </layout>
   </component>
@@ -519,10 +512,17 @@
     <entry file="file://$PROJECT_DIR$/Code/Plot.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Numerical Solution Plot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4784">
-          <caret selection-end-column="32" />
+        <state relative-caret-position="280">
+          <caret line="303" column="25" selection-start-line="303" selection-start-column="25" selection-end-line="303" selection-end-column="25" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
