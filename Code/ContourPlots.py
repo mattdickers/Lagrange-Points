@@ -5,7 +5,7 @@ plt.rc('mathtext', fontset="cm")
 
 cmaps = ['plasma', 'rainbow', 'gist_rainbow']
 cmapType = cmaps[0]
-top = 1
+top = 0
 
 
 def potential(x, y, mu):
@@ -32,4 +32,15 @@ if top == 1:
 else:
     ax.set_zlabel(r'$z$', fontsize=15)
 ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)
+print()
+Lx = np.array([x[14][17], x[14][24], x[14][7], x[8][17], x[20][17]])
+Ly = np.array([y[14][17], y[14][24], y[14][7], y[8][17], y[20][17]])
+ax.scatter(Lx[0], Ly[0]+0.075, 2, 'filled', label=r'$L_1$')
+ax.scatter(Lx[1], Ly[1]+0.075, 2, 'filled', label=r'$L_2$')
+ax.scatter(Lx[2], Ly[2]+0.075, 2, 'filled', label=r'$L_3$')
+ax.scatter(Lx[3], Ly[3]+0.075, 2, 'filled', label=r'$L_4$')
+ax.scatter(Lx[4], Ly[4]+0.075, 2, 'filled', label=r'$L_5$')
+
+plt.legend(loc='center left')
+plt.savefig('mu=0.25Potential.png')
 plt.show()
