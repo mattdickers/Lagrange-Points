@@ -2,8 +2,377 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fcead06f-f15d-407f-9745-d3ffdbb7f343" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Code/ContourPlots.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/ContourPlots.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Lagrange_GUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Lagrange_GUI.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/108.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/12.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/121.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/124.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/125.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/13.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/133.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/138.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/14.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/141.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/142.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/143.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/146.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/147.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/149.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/15.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/154.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/157.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/158.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/161.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/162.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/163.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/164.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/165.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/166.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/167.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/168.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/169.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/17.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/171.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/172.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/173.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/178.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/179.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/18.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/181.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/182.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/183.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/184.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/185.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/188.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/189.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/19.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/190.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/191.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/193.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/194.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/195.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/197.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/198.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/199.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/20.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/201.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/202.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/203.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/204.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/205.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/206.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/207.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/208.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/209.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/210.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/211.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/212.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/213.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/214.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/215.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/216.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/217.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/218.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/219.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/22.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/220.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/221.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/222.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/223.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/224.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/225.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/226.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/227.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/228.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/229.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/23.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/230.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/231.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/232.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/233.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/234.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/235.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/236.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/237.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/238.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/239.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/24.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/240.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/241.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/242.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/243.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/244.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/245.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/246.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/247.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/248.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/249.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/25.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/250.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/251.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/252.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/253.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/254.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/255.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/257.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/258.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/259.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/26.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/260.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/261.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/262.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/263.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/264.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/265.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/266.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/267.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/268.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/269.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/27.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/270.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/271.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/272.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/273.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/274.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/275.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/276.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/277.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/278.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/279.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/28.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/280.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/281.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/282.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/283.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/284.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/285.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/286.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/287.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/288.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/289.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/29.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/290.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/291.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/292.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/293.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/294.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/295.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/296.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/297.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/298.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/299.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/300.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/301.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/302.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/303.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/304.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/305.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/306.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/307.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/308.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/309.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/310.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/311.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/312.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/313.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/314.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/315.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/316.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/317.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/318.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/319.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/320.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/321.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/322.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/323.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/324.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/325.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/326.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/327.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/328.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/329.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/33.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/330.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/331.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/332.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/333.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/334.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/335.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/336.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/337.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/338.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/339.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/34.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/340.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/341.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/342.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/343.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/344.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/345.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/346.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/347.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/348.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/349.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/35.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/350.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/351.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/352.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/353.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/354.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/355.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/356.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/357.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/358.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/359.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/360.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/361.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/362.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/363.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/364.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/365.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/366.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/367.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/368.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/369.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/37.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/38.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/40.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/41.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/42.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/43.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/44.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/45.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/46.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/47.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/48.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/49.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/50.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/51.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/52.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/53.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/54.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/55.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/56.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/57.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/58.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/60.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/61.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/62.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/63.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/65.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/66.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/67.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/68.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/69.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/70.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/71.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/72.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/73.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/74.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/75.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/76.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/77.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/78.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/79.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/80.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/81.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/82.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/83.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/84.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/85.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/86.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/87.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/88.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/89.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/Plots/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/90.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/91.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/92.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/93.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/94.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/95.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/96.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/97.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/98.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/Plots/99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Code/mu=0.25Potential.png" beforeDir="false" afterPath="$PROJECT_DIR$/Code/mu=0.25Potential.png" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,22 +398,35 @@
     <session id="1629377391">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="548" />
+          <entry key="py" value="3663" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="548" />
+          <entry key="Python" value="3663" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="png" value="4" />
+          <entry key="py" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="4" />
+          <entry key="Python" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -52,12 +434,14 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Code/ContourPlots.py">
+        <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-384">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="370">
+              <caret line="544" lean-forward="true" selection-start-line="544" selection-end-line="544" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
+                <marker date="1583020886001" expanded="true" signature="13725:13731" ph="..." />
+                <marker date="1583020886001" expanded="true" signature="16516:16522" ph="..." />
               </folding>
             </state>
           </provider>
@@ -75,6 +459,14 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>round</find>
+      <find>advanced</find>
+      <find>.get</find>
+      <find>pointColour</find>
+      <find>update</find>
+      <find>updateButtonColour</find>
+      <find>getDropdownSelectUpdate</find>
+      <find>color</find>
+      <find>top</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -84,6 +476,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/Code/ContourPlots.py" />
+        <option value="$PROJECT_DIR$/Code/Lagrange_GUI.py" />
       </list>
     </option>
   </component>
@@ -103,6 +496,30 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Lagrange-Points" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lagrange-Points" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Lagrange-Points" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lagrange-Points" type="462c0819:PsiDirectoryNode" />
+              <item name="Code" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -121,10 +538,10 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mattd\Documents\GitHub\Lagrange-Points\Code" />
     </key>
   </component>
@@ -140,7 +557,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ContourPlots">
+  <component name="RunManager" selected="Python.Lagrange_GUI">
     <configuration name="ContourPlots" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Lagrange-Points" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -164,9 +581,6 @@
       <module name="Lagrange-Points" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="C:\Users\mattd\AppData\Local\Programs\Python\Python37\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Code" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -280,10 +694,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Lagrange_GUI" />
         <item itemvalue="Python.ContourPlots" />
         <item itemvalue="Python.MuPlots" />
         <item itemvalue="Python.Numerical Solution Plot" />
-        <item itemvalue="Python.Lagrange_GUI" />
         <item itemvalue="Python.OrbitPlotting" />
       </list>
     </recent_temporary>
@@ -324,10 +738,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13272922" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -342,11 +756,11 @@
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info active="true" anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Python Console" order="12" visible="true" weight="0.3286334" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.4334342" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.3326226" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
@@ -385,10 +799,54 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Code/ContourPlots.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-384">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="17">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Plot.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/MuPlot.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/mu=0.25PotentialDown.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/mu=0.25Potential.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/MultiplePlot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-425">
+          <caret line="8" selection-start-line="8" selection-end-line="9" selection-end-column="62" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../GraphPlotter/GraphPlotter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="433" column="12" selection-start-line="433" selection-start-column="12" selection-end-line="433" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Code/Lagrange_GUI.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="544" lean-forward="true" selection-start-line="544" selection-end-line="544" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+            <marker date="1583020886001" expanded="true" signature="13725:13731" ph="..." />
+            <marker date="1583020886001" expanded="true" signature="16516:16522" ph="..." />
           </folding>
         </state>
       </provider>

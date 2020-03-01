@@ -2,7 +2,6 @@ from mpl_toolkits import mplot3d
 import numpy as np
 from scipy.integrate import odeint
 import random
-import zipfile
 
 import matplotlib.pyplot as plt
 plt.rc('mathtext', fontset="cm")
@@ -11,9 +10,17 @@ from matplotlib.collections import LineCollection
 from tkinter import ttk
 from tkinter.filedialog import *
 import tkinter.messagebox
+from tkinter.colorchooser import *
 
-cmaps = ['plasma', 'rainbow', 'gist_rainbow']
-cmapType = cmaps[0]
+style = False
+
+lineThicknessDict = {'Thick':[1,2], 'Thin':[0.75, 0.75]}
+lineStylesDict = {"─":"-", "•":".", ".":",", "┄":"--"}
+buttonColours = {"line":(0, 0, 0), "mass1":(0, 0, 0), "mass2":(0, 0, 0)}
+cmapsDict = {'Plasma':'plasma', 'Rainbow 1':'rainbow', 'Rainbow 2':'gist_rainbow'}
+infoBoxColourDict = {'Light':'white', 'Dark':'black'}
+
+
 defailtTimeVal = 20
 defailtTimeStepVal = 0.001
 
@@ -23,13 +30,13 @@ class GUI:
         self.content.pack(side=TOP)
 
         self.titleFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
-        self.titleFrame.pack()
+        self.titleFrame.grid(column=0, row=0)
 
         self.title = Label(self.titleFrame, text="Lagrange Plotter")
         self.title.grid(column=0, row=0)
 
         self.inputFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
-        self.inputFrame.pack()
+        self.inputFrame.grid(column=0, row=1)
 
         self.initialLabel = Label(self.inputFrame, text="Initial Conditions:")
         self.initialLabel.grid(column=0, row=1, columnspan=2, sticky=W)
@@ -136,8 +143,8 @@ class GUI:
         self.plotVel = ttk.Checkbutton(self.inputFrame, text="Plot Velocity", variable=plotVel)
         self.plotVel.grid(column=1, row=8, padx=(50, 0), pady=(0, 5))
 
-        self.plotFrame = Frame(self.content)
-        self.plotFrame.pack()
+        self.plotFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
+        self.plotFrame.grid(column=0, row=2, columnspan=3)
 
         self.plotRandomButton = ttk.Button(self.plotFrame, text="Plot Random", command=self.PlotRandom)
         self.plotRandomButton.grid(column=1, row=9,  padx=(0,85), pady=(5, 0))
@@ -153,6 +160,167 @@ class GUI:
         self.topDown = ttk.Checkbutton(self.plotFrame, text="Top Down", variable=topDown)
         self.topDown.grid(column=1, row=10, padx=(85, 0), pady=(1, 0))
 
+        self.styleButton = ttk.Button(self.plotFrame, text="Show Style Options", command=self.Style)
+        self.styleButton.grid(column=1, row=11)
+
+        #Define Style variables
+        global plotTheme
+        plotTheme = StringVar()
+        plotTheme.set("Light")
+
+        global axesState
+        axesState = StringVar()
+        axesState.set("On")
+
+        global massState
+        massState = StringVar()
+        massState.set("On")
+
+        global lineThickness
+        lineThickness = StringVar()
+        lineThickness.set("Thick")
+
+        global lineStyle
+        lineStyle = StringVar()
+        lineStyle.set("─")
+
+        global velocityColour
+        velocityColour = StringVar()
+        velocityColour.set("Plasma")
+
+    def Style(self):
+        global style
+        if not style:
+            style = True
+            root.geometry("382x329")
+            self.styleButton.config(text='Hide Style Options')
+
+            #Create Dividing Line:
+            self.titleFillFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
+            self.titleFillFrame.grid(column=1, row=0)
+
+            self.canvas = Canvas(self.content, width=1, height=200, bg=ColourConvert((0, 0, 0)))
+            self.canvas.grid(column=1, row=1)
+
+            #canvas.create_line(0, 0, 1, 200, fill='red')
+
+            self.styleTitleFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
+            self.styleTitleFrame.grid(column=2, row=0)
+
+            self.styleTitle = Label(self.styleTitleFrame, text="Plot Style")
+            self.styleTitle.grid(column=0, row=0)
+
+            self.styleFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
+            self.styleFrame.grid(column=2, row=1)
+
+            self.themeLabel = Label(self.styleFrame, text="Plot Theme:")
+            self.themeLabel.grid(column=0, row=0, pady=(0,5), sticky=W)
+
+            self.plotTheme = ttk.OptionMenu(self.styleFrame, plotTheme, "Light", *["Light", "Dark"],
+                                            command=self.updateAllColours)
+            self.plotTheme.grid(column=1, row=0, padx=(20, 0), pady=(0,5))
+
+            self.axesStateLabel = Label(self.styleFrame, text="Display Axes:")
+            self.axesStateLabel.grid(column=0, row=1, pady=(0,5), sticky=W)
+
+            self.axesState = ttk.OptionMenu(self.styleFrame, axesState, "On", *["On", "Off"])
+            self.axesState.grid(column=1, row=1, padx=(20, 0), pady=(0,5))
+
+            self.massStateLabel = Label(self.styleFrame, text="Display Masses:")
+            self.massStateLabel.grid(column=0, row=2, pady=(0,5), sticky=W)
+
+            self.massState = ttk.OptionMenu(self.styleFrame, massState, "On", *["On", "Off"])
+            self.massState.grid(column=1, row=2, padx=(20, 0), pady=(0,5))
+
+            self.lineThicknessLabel = Label(self.styleFrame, text="Line Thickness:")
+            self.lineThicknessLabel.grid(column=0, row=3, pady=(0,5), sticky=W)
+
+            self.lineThickness = ttk.OptionMenu(self.styleFrame, lineThickness, "Thick", *["Thick", "Thin"])
+            self.lineThickness.grid(column=1, row=3, padx=(20, 0), pady=(0,5))
+
+            self.lineColourLabel = Label(self.styleFrame, text="Line Colour:")
+            self.lineColourLabel.grid(column=0, row=4, pady=(0,5), sticky=W)
+
+            self.lineColourButton = Button(self.styleFrame, width=3, background=ColourConvert(buttonColours["line"]),
+                                           borderwidth=1, activebackground=ColourConvert(buttonColours["line"]),
+                                           relief="flat")
+            self.lineColourButton.config(command=lambda: self.updateButtonColour(self.lineColourButton, "line"))
+            self.lineColourButton.grid(column=1, row=4, columnspan=2, padx=(20, 0), pady=(0,5))
+
+            self.lineStyleLabel = Label(self.styleFrame, text="Line Style:")
+            self.lineStyleLabel.grid(column=0, row=5, pady=(0,5), sticky=W)
+
+            self.lineStyle = ttk.OptionMenu(self.styleFrame, lineStyle, "─", *["─", "•", ".", "┄"])
+            self.lineStyle.grid(column=1, row=5, padx=(20, 0), pady=(0,5))
+
+            self.velocityColourLabel = Label(self.styleFrame, text="Velocity Colour:")
+            self.velocityColourLabel.grid(column=0, row=6, pady=(0,5), sticky=W)
+
+            self.velocityColour = ttk.OptionMenu(self.styleFrame, velocityColour, "Plasma", *["Plasma", "Rainbow 1", "Rainbow 2"])
+            self.velocityColour.grid(column=1, row=6, padx=(20, 0), pady=(0,5))
+
+            self.massColoursLabel = Label(self.styleFrame, text="Mass Colours:")
+            self.massColoursLabel.grid(column=0, row=7, pady=(0,5), sticky=W)
+
+            self.mass1Label = Label(self.styleFrame, text="m1:")
+            self.mass1Label.grid(column=1, row=7, pady=(0,5), sticky=W)
+
+            self.mass1Button = Button(self.styleFrame, width=3, background=ColourConvert(buttonColours["mass1"]),
+                                           borderwidth=1, activebackground=ColourConvert(buttonColours["mass1"]),
+                                           relief="flat")
+            self.mass1Button.config(command=lambda: self.updateButtonColour(self.mass1Button, "mass1"))
+            self.mass1Button.grid(column=1, row=7, columnspan=2, padx=(25, 0), pady=(0,5), sticky=W)
+
+            self.mass2Label = Label(self.styleFrame, text="m2:")
+            self.mass2Label.grid(column=1, row=7, padx=(55, 0), pady=(0,5), sticky=W)
+
+            self.mass2Button = Button(self.styleFrame, width=3, background=ColourConvert(buttonColours["mass2"]),
+                                      borderwidth=1, activebackground=ColourConvert(buttonColours["mass2"]),
+                                      relief="flat")
+            self.mass2Button.config(command=lambda: self.updateButtonColour(self.mass2Button, "mass2"))
+            self.mass2Button.grid(column=1, row=7, columnspan=2, padx=(80, 0), pady=(0,5), sticky=W)
+
+        else:
+            style = False
+            root.geometry("180x308")
+            self.styleTitleFrame.grid_forget()
+            self.styleFrame.grid_forget()
+            self.canvas.grid_forget()
+            self.styleButton.config(text='Show Style Options')
+
+    def updateAllColours(self, variable):
+        if plotTheme.get() == 'Light':
+            if buttonColours['line'] == (255, 255, 255):
+                self.updateButtonColour(self.lineColourButton, 'line', newColour=(0, 0, 0))
+            if buttonColours['mass1'] == (255, 255, 255):
+                self.updateButtonColour(self.mass1Button, 'mass1', newColour=(0, 0, 0))
+            if buttonColours['mass2'] == (255, 255, 255):
+                self.updateButtonColour(self.mass2Button, 'mass2', newColour=(0, 0, 0))
+        elif plotTheme.get() == 'Dark':
+            if buttonColours['line'] == (0, 0, 0):
+                self.updateButtonColour(self.lineColourButton, 'line', newColour=(255, 255, 255))
+            if buttonColours['mass1'] == (0, 0, 0):
+                self.updateButtonColour(self.mass1Button, 'mass1', newColour=(255, 255, 255))
+            if buttonColours['mass2'] == (0, 0, 0):
+                self.updateButtonColour(self.mass2Button, 'mass2', newColour=(255, 255, 255))
+
+    def updateButtonColour(self, button, function, newColour=None):
+        if not newColour:
+            colour = buttonColours[function]
+            prev = colour
+            try:
+                colour = GetColour()
+                button.config(background=ColourConvert(colour),
+                              activebackground=ColourConvert(colour))
+                buttonColours[function] = colour
+            except TypeError:
+                colour = prev
+                button.config(background=ColourConvert(colour),
+                              activebackground=ColourConvert(colour))
+        else:
+            button.config(background=ColourConvert(newColour),
+                          activebackground=ColourConvert(newColour))
+            buttonColours[function] = newColour
 
     def PlotRandom(self):
         #empty = False
@@ -251,7 +419,19 @@ class GUI:
 def ColourConvert(rgb):
     return "#%02x%02x%02x" % (int(rgb[0]), int(rgb[1]), int(rgb[2]))
 
+def RGBtoFloat(rgb):
+    return (int(rgb[0])/255, int(rgb[1])/255, int(rgb[2])/255)
+
+def GetColour():
+    colour = askcolor()
+    return colour[0]
+
 def Orbit(initial, mu, velocity):
+    if plotTheme.get() == 'Dark':
+        plt.style.use('dark_background')
+    elif plotTheme.get() =='Light':
+        plt.style.use('grayscale')
+
     #Data for plotting
     t=np.arange(0.0,float(timeVal.get()),float(timeStepVal.get()))  # time steps
 
@@ -276,41 +456,52 @@ def Orbit(initial, mu, velocity):
         segments = np.concatenate([points[:-1], points[1:]], axis=1)
 
         norm = plt.Normalize(vel.min(), vel.max())
-        lc = LineCollection(segments, cmap=cmapType, norm=norm)
+        lc = LineCollection(segments, cmap=cmapsDict[velocityColour.get()], norm=norm)
         lc.set_array(vel)
-        lc.set_linewidth(2)
+        lc.set_linewidth(lineThicknessDict[lineThickness.get()][1])
         line = ax.add_collection(lc)
-        cbar = fig.colorbar(line, ax=ax)
-        cbar.ax.set_ylabel('Magnitude of Veclocity', rotation='vertical', fontsize=15)
+        if axesState.get() == 'On':
+            cbar = fig.colorbar(line, ax=ax)
+            cbar.ax.set_ylabel('Magnitude of Veclocity', rotation='vertical', fontsize=15)
 
     else:
         #Can be used to plot if not using velcoity gradient:
-        flow=ax.plot(states[:,0],states[:,1],'k')[0]
+        flow=ax.plot(states[:,0],states[:,1], lineStylesDict[lineStyle.get()], color=RGBtoFloat(buttonColours["line"]),
+                     linewidth=lineThicknessDict[lineThickness.get()][0])[0]
 
 
     #Plot Other Masses:
-    size = 10
-    ax.plot(-mu,0,'ko' ,markersize=((1 - mu)*size))
-    ax.plot(1 - mu,0,'ko', markersize=(mu * size))
+    if massState.get() == 'On':
+        size = 10
+        ax.plot(-mu,0,'o', color=RGBtoFloat(buttonColours["mass1"]), markersize=((1 - mu)*size))
+        ax.plot(1 - mu,0,'o', color=RGBtoFloat(buttonColours["mass2"]), markersize=(mu * size))
 
-    ax.set_title(r"Plot of the Orbit of a mass $m_3$", fontsize=16)
-    ax.set_xlabel("$x$", fontsize=15)
-    ax.set_ylabel("$y$", fontsize=15)
+    if axesState.get() == 'On':
+        ax.set_title(r"Plot of the Orbit of a mass $m_3$", fontsize=16)
+        ax.set_xlabel("$x$", fontsize=15)
+        ax.set_ylabel("$y$", fontsize=15)
 
-    textstr = '\n'.join((
-        r'Initial Conditions',
-        r'$x=%.2f$' % (initial[0],),
-        r'$y=%.2f$' % (initial[1],),
-        r'$v_x=%.2f$' % (initial[2],),
-        r'$v_y=%.2f$' % (initial[3],),
-        r'$\mu=%.2f$' % (mu,)))
+        textstr = '\n'.join((
+            r'Initial Conditions',
+            r'$x=%.2f$' % (initial[0],),
+            r'$y=%.2f$' % (initial[1],),
+            r'$v_x=%.2f$' % (initial[2],),
+            r'$v_y=%.2f$' % (initial[3],),
+            r'$\mu=%.2f$' % (mu,)))
 
-    props = dict(boxstyle='round', facecolor='white', alpha=0.5)
+        props = dict(boxstyle='round', facecolor=infoBoxColourDict[plotTheme.get()], alpha=0.5)
 
-    ax.text(0.05, 0.95, textstr, transform=ax.transAxes,
-            verticalalignment='top', bbox=props)
+        ax.text(0.05, 0.95, textstr, transform=ax.transAxes,
+                verticalalignment='top', bbox=props)
+    else:
+        plt.axis('off')
 
 def Potential(mu, top):
+    if plotTheme.get() == 'Dark':
+        plt.style.use('dark_background')
+    elif plotTheme.get() =='Light':
+        plt.style.use('grayscale')
+
     def potential(x, y, mu):
         return (0.5 * (x ** 2 + y ** 2)) + ((1 - mu) / np.sqrt((x + mu) ** 2 + y ** 2)) + (
                     mu / np.sqrt((x + mu - 1) ** 2 + y ** 2))
@@ -323,18 +514,23 @@ def Potential(mu, top):
 
     fig = plt.figure()
     ax = plt.axes(projection='3d')
-    ax.contour3D(x, y, z, 50, cmap=cmapType)
+    ax.contour3D(x, y, z, 50, cmap=cmapsDict[velocityColour.get()])
     ax.invert_xaxis()
-    ax.set_xlabel(r'$x$', fontsize=15)
-    ax.set_ylabel(r'$y$', fontsize=15)
+
+    if axesState.get() == 'On':
+        ax.set_xlabel(r'$x$', fontsize=15)
+        ax.set_ylabel(r'$y$', fontsize=15)
+        ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)
+        if top != 1:
+            ax.set_zlabel(r'$z$', fontsize=15)
+    else:
+        plt.axis('off')
+
     if top == 1:
         ax.view_init(elev=90., azim=90)
         ax.w_zaxis.line.set_lw(0.)
         ax.set_zticks([])
         ax.dist = 7
-    else:
-        ax.set_zlabel(r'$z$', fontsize=15)
-    ax.set_title('Plot of the Gravitational Potential for $\mu=%.2f$' % (mu,), fontsize=16)
 
 
 root = Tk()
@@ -343,7 +539,7 @@ GUI = GUI(root)
 
 root.wm_title("")
 
-root.geometry("180x285")
+root.geometry("180x308")
 
 root.resizable(width=False, height=False)
 
