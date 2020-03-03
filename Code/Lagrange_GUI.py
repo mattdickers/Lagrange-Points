@@ -14,7 +14,7 @@ from tkinter.colorchooser import *
 
 style = False
 
-lineThicknessDict = {'Thick':[1,2], 'Thin':[0.75, 0.75]}
+lineThicknessDict = {'Thicc':[1,2], 'Thin':[0.75, 0.75]}
 lineStylesDict = {"─":"-", "•":".", ".":",", "┄":"--"}
 buttonColours = {"line":(0, 0, 0), "mass1":(0, 0, 0), "mass2":(0, 0, 0)}
 cmapsDict = {'Plasma':'plasma', 'Rainbow 1':'rainbow', 'Rainbow 2':'gist_rainbow'}
@@ -178,7 +178,7 @@ class GUI:
 
         global lineThickness
         lineThickness = StringVar()
-        lineThickness.set("Thick")
+        lineThickness.set("Thicc")
 
         global lineStyle
         lineStyle = StringVar()
@@ -201,8 +201,6 @@ class GUI:
 
             self.canvas = Canvas(self.content, width=1, height=200, bg=ColourConvert((0, 0, 0)))
             self.canvas.grid(column=1, row=1)
-
-            #canvas.create_line(0, 0, 1, 200, fill='red')
 
             self.styleTitleFrame = Frame(self.content, bg=ColourConvert((240, 240, 240)))
             self.styleTitleFrame.grid(column=2, row=0)
@@ -232,10 +230,10 @@ class GUI:
             self.massState = ttk.OptionMenu(self.styleFrame, massState, "On", *["On", "Off"])
             self.massState.grid(column=1, row=2, padx=(20, 0), pady=(0,5))
 
-            self.lineThicknessLabel = Label(self.styleFrame, text="Line Thickness:")
+            self.lineThicknessLabel = Label(self.styleFrame, text="Line Thiccness:")
             self.lineThicknessLabel.grid(column=0, row=3, pady=(0,5), sticky=W)
 
-            self.lineThickness = ttk.OptionMenu(self.styleFrame, lineThickness, "Thick", *["Thick", "Thin"])
+            self.lineThickness = ttk.OptionMenu(self.styleFrame, lineThickness, "Thicc", *["Thicc", "Thin"])
             self.lineThickness.grid(column=1, row=3, padx=(20, 0), pady=(0,5))
 
             self.lineColourLabel = Label(self.styleFrame, text="Line Colour:")
@@ -359,7 +357,7 @@ class GUI:
                     else:
                         mu = float(self.muVal.get())
 
-                    Orbit([x, y, vx, vy], mu, plotVel.get())
+                    Orbit([x, y, vx, vy], mu)
                     plt.savefig("Plots\\" + str(plot) + str(saveFormat.get()))
                     print("Plot", str(plot), "saved")
                     #if empty:
@@ -384,7 +382,7 @@ class GUI:
                 filePath = asksaveasfilename(title="Save Plot", filetypes=(
                 (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
                 if filePath != "":
-                    Orbit([x, y, vx, vy], mu, plotVel.get())
+                    Orbit([x, y, vx, vy], mu)
                     plt.savefig(str(filePath) + str(saveFormat.get()))
                     print("Plot Saved")
                 else:
@@ -426,7 +424,7 @@ def GetColour():
     colour = askcolor()
     return colour[0]
 
-def Orbit(initial, mu, velocity):
+def Orbit(initial, mu):
     if plotTheme.get() == 'Dark':
         plt.style.use('dark_background')
     elif plotTheme.get() =='Light':
@@ -449,7 +447,14 @@ def Orbit(initial, mu, velocity):
     #Plot Flow Lines:
     states=odeint(motion,initial,t)
 
-    if velocity == 1:
+    if plotVel.get() == 1:
+        #Plot general line to obtain correct axes
+        if plotTheme.get() == 'Light':
+            lineColour = (255, 255, 255)
+        elif plotTheme.get() == 'Dark':
+            lineColour = (0, 0, 0)
+        flow=ax.plot(states[:, 0], states[:, 1], color=RGBtoFloat(lineColour), linewidth=0)[0]
+
         #Plot with velocity gradient:
         vel = np.sqrt(np.square(states[:,2]) + np.square(states[:,3]))
         points = np.array([states[:,0], states[:,1]]).T.reshape(-1, 1, 2)
