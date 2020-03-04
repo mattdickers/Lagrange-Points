@@ -330,6 +330,10 @@ class GUI:
         #                                     "μ must be between 0.01 and 0.49. Please provide a more appropriate value and try again.")
         #else:
             try:
+                file = open("Plots\\InitialConditions.txt", "w")
+                file.write('')
+                file.close()
+                file = open("Plots\\InitialConditions.txt", "a+")
                 for plot in range(1, int(self.plotNum.get()) + 1):
                     if xHold.get() == 0:
                         x = random.randint(-5, 5)
@@ -360,8 +364,15 @@ class GUI:
                     Orbit([x, y, vx, vy], mu)
                     plt.savefig("Plots\\" + str(plot) + str(saveFormat.get()))
                     print("Plot", str(plot), "saved")
+                    file.write("Plot "+str(plot)+":\n")
+                    file.write("x = " + str(x) + "\n")
+                    file.write("y = " + str(y) + "\n")
+                    file.write("vx = " + str(vx) + "\n")
+                    file.write("vy = " + str(vy) + "\n")
+                    file.write("mu = " + str(mu) + "\n\n")
                     #if empty:
                     #    muVal.set("")
+                file.close()
 
             except ValueError:
                 tkinter.messagebox.showerror("Value Error",
