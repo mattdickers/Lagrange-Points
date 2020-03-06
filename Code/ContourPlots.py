@@ -5,7 +5,7 @@ plt.rc('mathtext', fontset="cm")
 
 cmaps = ['plasma', 'rainbow', 'gist_rainbow']
 cmapType = cmaps[0]
-top = 1
+top = 0
 axes = 0
 
 
@@ -54,5 +54,5 @@ ax.scatter(Lx[4], Ly[4]+0.075, 2, 'filled', color='pink', label=r'$L_5$')
 
 if axes:
     plt.legend(loc='center left')
-plt.savefig('pinkplot.png')
+plt.savefig('pinkplot3D.png')
 #plt.show()
