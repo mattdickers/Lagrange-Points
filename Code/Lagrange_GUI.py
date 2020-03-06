@@ -188,6 +188,10 @@ class GUI:
         velocityColour = StringVar()
         velocityColour.set("Plasma")
 
+        global lineThiccnessEntryVal
+        lineThiccnessEntryVal = StringVar()#
+        lineThiccnessEntryVal.set("Thicc")
+
     def Style(self):
         global style
         if not style:
@@ -233,7 +237,8 @@ class GUI:
             self.lineThicknessLabel = Label(self.styleFrame, text="Line Thiccness:")
             self.lineThicknessLabel.grid(column=0, row=3, pady=(0,5), sticky=W)
 
-            self.lineThickness = ttk.OptionMenu(self.styleFrame, lineThickness, "Thicc", *["Thicc", "Thin"])
+            self.lineThickness = ttk.OptionMenu(self.styleFrame, lineThickness, "Thicc", *["Thicc", "Thin", "Custom"],
+                                                command=self.customThiccness)
             self.lineThickness.grid(column=1, row=3, padx=(20, 0), pady=(0,5))
 
             self.lineColourLabel = Label(self.styleFrame, text="Line Colour:")
@@ -319,6 +324,11 @@ class GUI:
             button.config(background=ColourConvert(newColour),
                           activebackground=ColourConvert(newColour))
             buttonColours[function] = newColour
+
+    def customThiccness(self, variable):
+        if lineThickness.get() == "Custom":
+            self.lineThickness = ttk.Entry(self.styleFrame, width=10, textvariable=lineThiccnessEntryVal)
+            self.lineThickness.grid(column=1, row=3, padx=(20, 0), pady=(0, 5))
 
     def PlotRandom(self):
         #empty = False
@@ -474,7 +484,10 @@ def Orbit(initial, mu):
         norm = plt.Normalize(vel.min(), vel.max())
         lc = LineCollection(segments, cmap=cmapsDict[velocityColour.get()], norm=norm)
         lc.set_array(vel)
-        lc.set_linewidth(lineThicknessDict[lineThickness.get()][1])
+        if lineThickness.get() == "Custom":
+            lc.set_linewidth(lineThiccnessEntryVal.get().lower().count('c'))
+        else:
+            lc.set_linewidth(lineThicknessDict[lineThickness.get()][1])
         line = ax.add_collection(lc)
         if axesState.get() == 'On':
             cbar = fig.colorbar(line, ax=ax)
@@ -482,8 +495,14 @@ def Orbit(initial, mu):
 
     else:
         #Can be used to plot if not using velcoity gradient:
-        flow=ax.plot(states[:,0],states[:,1], lineStylesDict[lineStyle.get()], color=RGBtoFloat(buttonColours["line"]),
-                     linewidth=lineThicknessDict[lineThickness.get()][0])[0]
+        if lineThickness.get() == "Custom":
+            flow = ax.plot(states[:, 0], states[:, 1], lineStylesDict[lineStyle.get()],
+                           color=RGBtoFloat(buttonColours["line"]),
+                           linewidth=lineThiccnessEntryVal.get().lower().count('c'))[0]
+        else:
+            flow=ax.plot(states[:,0],states[:,1], lineStylesDict[lineStyle.get()],
+                         color=RGBtoFloat(buttonColours["line"]),
+                        linewidth=lineThicknessDict[lineThickness.get()][0])[0]
 
 
     #Plot Other Masses:
