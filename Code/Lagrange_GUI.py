@@ -6,6 +6,7 @@ import random
 import matplotlib.pyplot as plt
 plt.rc('mathtext', fontset="cm")
 from matplotlib.collections import LineCollection
+import matplotlib.colors as colours
 
 from tkinter import ttk
 from tkinter.filedialog import *
@@ -14,9 +15,10 @@ from tkinter.colorchooser import *
 
 style = False
 
+#customCmap = {'cmap1':(255, 0, 0), 'cmap2':(0, 255, 0), 'cmap3':(0, 0, 255)}
 lineThicknessDict = {'Thicc':[1,2], 'Thin':[0.75, 0.75]}
 lineStylesDict = {"─":"-", "•":".", ".":",", "┄":"--"}
-buttonColours = {"line":(0, 0, 0), "mass1":(0, 0, 0), "mass2":(0, 0, 0)}
+buttonColours = {"line":(0, 0, 0), "mass1":(0, 0, 0), "mass2":(0, 0, 0), 'cmap1':(255, 0, 0), 'cmap2':(0, 255, 0), 'cmap3':(0, 0, 255)}
 cmapsDict = {'Plasma':'plasma', 'Rainbow 1':'rainbow', 'Rainbow 2':'gist_rainbow'}
 infoBoxColourDict = {'Light':'white', 'Dark':'black'}
 
@@ -197,6 +199,7 @@ class GUI:
         if not style:
             style = True
             root.geometry("382x329")
+            root.wm_title("Lagrange Plotter")
             self.styleButton.config(text='Hide Style Options')
 
             #Create Dividing Line:
@@ -259,7 +262,8 @@ class GUI:
             self.velocityColourLabel = Label(self.styleFrame, text="Velocity Colour:")
             self.velocityColourLabel.grid(column=0, row=6, pady=(0,5), sticky=W)
 
-            self.velocityColour = ttk.OptionMenu(self.styleFrame, velocityColour, "Plasma", *["Plasma", "Rainbow 1", "Rainbow 2"])
+            self.velocityColour = ttk.OptionMenu(self.styleFrame, velocityColour, "Plasma", *["Plasma", "Rainbow 1", "Rainbow 2", "Custom"],
+                                                 command=self.customCmap)
             self.velocityColour.grid(column=1, row=6, padx=(20, 0), pady=(0,5))
 
             self.massColoursLabel = Label(self.styleFrame, text="Mass Colours:")
@@ -286,6 +290,7 @@ class GUI:
         else:
             style = False
             root.geometry("180x308")
+            root.wm_title("")
             self.styleTitleFrame.grid_forget()
             self.styleFrame.grid_forget()
             self.canvas.grid_forget()
@@ -329,6 +334,26 @@ class GUI:
         if lineThickness.get() == "Custom":
             self.lineThickness = ttk.Entry(self.styleFrame, width=10, textvariable=lineThiccnessEntryVal)
             self.lineThickness.grid(column=1, row=3, padx=(20, 0), pady=(0, 5))
+
+    def customCmap(self, variable):
+        if velocityColour.get() == "Custom":
+            self.cmapButton1 = Button(self.styleFrame, width=3, background=ColourConvert(buttonColours["cmap1"]),
+                                      borderwidth=1, activebackground=ColourConvert(buttonColours["cmap1"]),
+                                      relief="flat")
+            self.cmapButton1.config(command=lambda: self.updateButtonColour(self.cmapButton1, "cmap1"))
+            self.cmapButton1.grid(column=1, row=6, columnspan=2, padx=(25, 0), pady=(0, 5), sticky=W)
+
+            self.cmapButton2 = Button(self.styleFrame, width=3, background=ColourConvert(buttonColours["cmap2"]),
+                                      borderwidth=1, activebackground=ColourConvert(buttonColours["cmap2"]),
+                                      relief="flat")
+            self.cmapButton2.config(command=lambda: self.updateButtonColour(self.cmapButton2, "cmap2"))
+            self.cmapButton2.grid(column=1, row=6, columnspan=2, padx=(25, 0), pady=(0, 5))
+
+            self.cmapButton3 = Button(self.styleFrame, width=3, background=ColourConvert(buttonColours["cmap3"]),
+                                      borderwidth=1, activebackground=ColourConvert(buttonColours["cmap3"]),
+                                      relief="flat")
+            self.cmapButton3.config(command=lambda: self.updateButtonColour(self.cmapButton3, "cmap3"))
+            self.cmapButton3.grid(column=1, row=6, columnspan=2, padx=(25, 0), pady=(0, 5), sticky=E)
 
     def PlotRandom(self):
         #empty = False
@@ -469,6 +494,13 @@ def Orbit(initial, mu):
     states=odeint(motion,initial,t)
 
     if plotVel.get() == 1:
+        if velocityColour.get() == "Custom":
+            cmap = colours.LinearSegmentedColormap.from_list("", [RGBtoFloat(buttonColours['cmap1']),
+                                                                  RGBtoFloat(buttonColours['cmap2']),
+                                                                  RGBtoFloat(buttonColours['cmap3'])])
+        else:
+            cmap = cmapsDict[velocityColour.get()]
+
         #Plot general line to obtain correct axes
         if plotTheme.get() == 'Light':
             lineColour = (255, 255, 255)
@@ -482,7 +514,7 @@ def Orbit(initial, mu):
         segments = np.concatenate([points[:-1], points[1:]], axis=1)
 
         norm = plt.Normalize(vel.min(), vel.max())
-        lc = LineCollection(segments, cmap=cmapsDict[velocityColour.get()], norm=norm)
+        lc = LineCollection(segments, cmap=cmap, norm=norm)
         lc.set_array(vel)
         if lineThickness.get() == "Custom":
             lc.set_linewidth(lineThiccnessEntryVal.get().lower().count('c'))
@@ -536,6 +568,13 @@ def Potential(mu, top):
         plt.style.use('dark_background')
     elif plotTheme.get() =='Light':
         plt.style.use('grayscale')
+
+    if velocityColour.get() == "Custom":
+        cmap = colours.LinearSegmentedColormap.from_list("", [RGBtoFloat(buttonColours['cmap1']),
+                                                              RGBtoFloat(buttonColours['cmap2']),
+                                                              RGBtoFloat(buttonColours['cmap3'])])
+    else:
+        cmap = cmapsDict[velocityColour.get()]
 
     def potential(x, y, mu):
         return (0.5 * (x ** 2 + y ** 2)) + ((1 - mu) / np.sqrt((x + mu) ** 2 + y ** 2)) + (
