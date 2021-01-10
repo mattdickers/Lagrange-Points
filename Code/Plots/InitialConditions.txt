@@ -1,70 +1,7 @@
 Plot 1:
-x = 1
-y = 0
-vx = 4
-vy = -1
-mu = 0.07
-
-Plot 2:
 x = -5
-y = 0
-vx = 1
-vy = -3
-mu = 0.86
-
-Plot 3:
-x = -3
-y = 0
-vx = 1
-vy = -5
-mu = 0.01
-
-Plot 4:
-x = -4
-y = 5
-vx = 3
-vy = 0
-mu = 0.92
-
-Plot 5:
-x = 3
-y = -3
-vx = 3
-vy = -2
-mu = 0.1
-
-Plot 6:
-x = 4
-y = 1
-vx = 2
-vy = 2
-mu = 0.69
-
-Plot 7:
-x = 3
-y = -5
-vx = -4
-vy = -1
-mu = 0.02
-
-Plot 8:
-x = -4
 y = 4
 vx = 3
-vy = -5
-mu = 0.12
-
-Plot 9:
-x = 2
-y = -1
-vx = 2
-vy = 5
-mu = 0.75
-
-Plot 10:
-x = -2
-y = 3
-vx = 4
-vy = -3
-mu = 0.57
+vy = 2
+mu = 0.54
 

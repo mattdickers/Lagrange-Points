@@ -20,7 +20,7 @@ lineThicknessDict = {'Thicc':[1,2], 'Thin':[0.75, 0.75]}
 lineStylesDict = {"─":"-", "•":".", ".":",", "┄":"--"}
 buttonColours = {"line":(0, 0, 0), "mass1":(0, 0, 0), "mass2":(0, 0, 0), 'cmap1':(255, 0, 0), 'cmap2':(0, 255, 0), 'cmap3':(0, 0, 255)}
 cmapsDict = {'Plasma':'plasma', 'Rainbow 1':'rainbow', 'Rainbow 2':'gist_rainbow'}
-infoBoxColourDict = {'Light':'white', 'Dark':'black'}
+infoBoxColourDict = {'Light':'white', 'Dark':'black', 'Transparent':'white'}
 
 
 defailtTimeVal = 20
@@ -46,7 +46,7 @@ class GUI:
         global saveFormat
         saveFormat = StringVar()
         saveFormat.set("Select")
-        self.saveFormat = ttk.OptionMenu(self.inputFrame, saveFormat, ".png", *[".png", ".svg"])
+        self.saveFormat = ttk.OptionMenu(self.inputFrame, saveFormat, ".png", *[".png", ".pdf", ".svg"])
         self.saveFormat.grid(column=1, row=1, padx=(60,0))
 
         self.xLabel = Label(self.inputFrame, text="x:")
@@ -221,7 +221,7 @@ class GUI:
             self.themeLabel = Label(self.styleFrame, text="Plot Theme:")
             self.themeLabel.grid(column=0, row=0, pady=(0,5), sticky=W)
 
-            self.plotTheme = ttk.OptionMenu(self.styleFrame, plotTheme, "Light", *["Light", "Dark"],
+            self.plotTheme = ttk.OptionMenu(self.styleFrame, plotTheme, "Light", *["Light", "Dark", "Transparent"],
                                             command=self.updateAllColours)
             self.plotTheme.grid(column=1, row=0, padx=(20, 0), pady=(0,5))
 
@@ -397,7 +397,7 @@ class GUI:
                         mu = float(self.muVal.get())
 
                     Orbit([x, y, vx, vy], mu)
-                    plt.savefig("Plots\\" + str(plot) + str(saveFormat.get()))
+                    plt.savefig("Plots\\" + str(plot) + str(saveFormat.get()), transparent=(True if plotTheme.get() == 'Transparent' else False))
                     print("Plot", str(plot), "saved")
                     file.write("Plot "+str(plot)+":\n")
                     file.write("x = " + str(x) + "\n")
@@ -429,7 +429,7 @@ class GUI:
                 (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
                 if filePath != "":
                     Orbit([x, y, vx, vy], mu)
-                    plt.savefig(str(filePath) + str(saveFormat.get()))
+                    plt.savefig(str(filePath) + str(saveFormat.get()), transparent=(True if plotTheme.get() == 'Transparent' else False))
                     print("Plot Saved")
                 else:
                     tkinter.messagebox.showerror("Save Error",
@@ -449,7 +449,7 @@ class GUI:
                 (str(saveFormat.get())[1:].upper(), "*" + str(saveFormat.get())), ("All files", "*")))
                 if filePath != "":
                     Potential(float(self.muVal.get()), topDown.get())
-                    plt.savefig(str(filePath) + str(saveFormat.get()))
+                    plt.savefig(str(filePath) + str(saveFormat.get()), transparent=(True if plotTheme.get() == 'Transparent' else False))
                     print("Plot saved")
                 else:
                     tkinter.messagebox.showerror("Save Error",
